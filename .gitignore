@@ -1,4 +1,5 @@
 .env
+*.pyc
 
 ## Databases
 monica_rag.db
