@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Monica RAG CLI",
+      "type": "python",
+      "request": "launch",
+      "module": "monica-rag",
+      "args": ["search", "-q", "tech"],
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "Python: Analytics",
+      "type": "python",
+      "request": "launch",
+      "module": "monica-rag",
+      "args": ["analytics", "completion", "-f", "email"],
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    }
+  ]
+}

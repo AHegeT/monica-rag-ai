@@ -2,7 +2,10 @@ LICENSE
 README.md
 setup.py
 src/monica-rag/__init__.py
+src/monica-rag/__main__.py
 src/monica-rag/config.py
+src/monica-rag/analytics/__init__.py
+src/monica-rag/analytics/contact_analytics.py
 src/monica-rag/api/__init__.py
 src/monica-rag/api/client.py
 src/monica-rag/models/__init__.py

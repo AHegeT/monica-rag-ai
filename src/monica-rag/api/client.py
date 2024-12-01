@@ -53,6 +53,26 @@ class MonicaAPIClient:
     def get_contacts(self) -> List[Dict]:
         """Get all contacts from Monica."""
         return self._make_request('GET', 'contacts')['data']
+    
+    def get_contact_fields(self, contact_id: int) -> List[Dict]:
+        """Get all contact fields for a specific contact."""
+        return self._make_request('GET', f'contacts/{contact_id}/contactfields')['data']
+    
+    def get_all_contacts_fields(self) -> Dict[int, List[Dict]]:
+        """Get contact fields for all contacts."""
+        contacts = self.get_contacts()
+        contact_fields = {}
+        
+        for contact in contacts:
+            contact_id = contact['id']
+            try:
+                fields = self.get_contact_fields(contact_id)
+                contact_fields[contact_id] = fields
+            except Exception as e:
+                print(f"Failed to get fields for contact {contact_id}: {str(e)}")
+                contact_fields[contact_id] = []
+                
+        return contact_fields
 
     def get_contact_details(self, contact_id: int) -> Dict:
         """Get detailed information about a specific contact."""

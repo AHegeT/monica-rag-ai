@@ -1,4 +1,9 @@
 .env
+
+## Python
+*.egg-info/
+*.egg
+__pycache__/
 *.pyc
 
 ## Databases

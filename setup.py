@@ -10,6 +10,7 @@ setup(
         "numpy>=1.19.0",
         "sentence-transformers>=2.0.0",
         "python-dotenv>=0.19.0",
+        "click>=8.0.0",
     ],
     extras_require={
         "dev": [
